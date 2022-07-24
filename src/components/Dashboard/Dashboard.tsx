@@ -1,11 +1,15 @@
 import React from "react";
-import { IconBook } from "../Icons/IconBook";
-import { IconDiagram } from "../Icons/IconDiagram";
-import { IconLightbulb } from "../Icons/IconLightbulb";
-import { IconLogo } from "../Icons/IconLogo";
-import { IconPeople } from "../Icons/IconPeople";
-import { IconTicket } from "../Icons/IconTicket";
-import { IconUser } from "../Icons/IconUser";
+import {
+  IconAward,
+  IconBook,
+  IconDiagram,
+  IconGear,
+  IconLightbulb,
+  IconLogo,
+  IconPeople,
+  IconTicket,
+  IconUser,
+} from "../Icons/Icons";
 import { DashboardGroup } from "./DashboardGroup";
 
 export const Dashboard = () => {
@@ -35,6 +39,15 @@ export const Dashboard = () => {
         </DashboardGroup.Item>
         <DashboardGroup.Item icon={<IconBook />} url={"/articles"}>
           Articles
+        </DashboardGroup.Item>
+      </DashboardGroup>
+      <hr className="text-[#DFE0EB] opacity-[0.06]" />
+      <DashboardGroup>
+        <DashboardGroup.Item icon={<IconGear />} url={"/settings"}>
+          Settings
+        </DashboardGroup.Item>
+        <DashboardGroup.Item icon={<IconAward />} url={"/subscriptions"}>
+          Subscription
         </DashboardGroup.Item>
       </DashboardGroup>
     </aside>

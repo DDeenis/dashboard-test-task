@@ -6,7 +6,10 @@ body {
   font-family: "Mulish", sans-serif;
 }
 
+.App {
+  @apply bg-[#F7F8FC] w-full min-h-screen flex;
+}
+
 .icon-active svg path {
-  @apply fill-[#dde2ff];
-  @apply opacity-100;
+  @apply fill-[#dde2ff] opacity-100;
 }
