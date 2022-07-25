@@ -11,7 +11,7 @@ type Props = {
 
 export const AppHeader = ({ user, hasNotifications }: Props) => {
   return (
-    <header className="w-full flex justify-between items-center">
+    <header className="w-full flex justify-between items-center mb-14">
       <span className="font-bold text-2xl text-[#252733]">Users</span>
       <div className="flex items-center gap-8">
         <div className="flex gap-6">
@@ -30,7 +30,7 @@ export const AppHeader = ({ user, hasNotifications }: Props) => {
           <span className="font-semibold text-sm text-[#252733]">
             {user.name}
           </span>
-          <div className="border-[1.5px] border-[#DFE0EB] rounded-full p-[2px]">
+          <div className="border-[1.5px] border-[#DFE0EB] rounded-full p-[2px] cursor-pointer">
             <img
               src={user.avatar}
               alt="Avatar"

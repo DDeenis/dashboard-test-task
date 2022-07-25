@@ -31,10 +31,10 @@ const DashboardItem: React.FC<ItemProps> = ({
   isActive,
   children,
 }) => {
-  const [isHover, setHover] = useState(false);
+  const [isHover, setIsHover] = useState(false);
 
-  const onHover = () => setHover(true);
-  const onBlur = () => setHover(false);
+  const onHover = () => setIsHover(true);
+  const onBlur = () => setIsHover(false);
 
   return (
     <li
