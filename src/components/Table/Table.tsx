@@ -12,7 +12,7 @@ type Extentions = {
 
 export const Table: React.FC<Props> & Extentions = ({ children, header }) => {
   return (
-    <div className="py-8 bg-white border border-[#DFE0EB] rounded-lg w-full grid grid-flow-row">
+    <div className="pt-8 bg-white border border-[#DFE0EB] rounded-lg w-full grid grid-flow-row">
       <div className="px-8">{header}</div>
       {children}
     </div>
