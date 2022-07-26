@@ -16,7 +16,7 @@ type Extentions = {
 
 export const InfoCards: React.FC<Props> & Extentions = ({ children }) => {
   return (
-    <div className="w-full flex justify-center items-center gap-8">
+    <div className="w-full flex justify-center items-center gap-8 flex-wrap lg:flex-nowrap">
       {children}
     </div>
   );
@@ -31,7 +31,7 @@ const Card: React.FC<ItemProps> = ({ title, value }) => {
   return (
     <div
       className={clsx(
-        "border w-full max-w-[252px] px-8 py-6 text-center rounded-lg cursor-pointer transition-colors",
+        "border w-full max-w-[252px] px-8 py-6 text-center rounded-lg cursor-pointer transition-colors bg-white",
         isHover && "border-[#3751FF]"
       )}
       onMouseEnter={onHover}

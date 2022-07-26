@@ -1,7 +1,7 @@
 import React from "react";
-import { UserExtended } from "../api/users";
-import { IconMenu } from "../components/Icons/Icons";
-import { Label } from "../components/Label/Label";
+import { UserExtended } from "../../api/users";
+import { IconMenu } from "../../components/Icons/Icons";
+import { Label } from "../../components/Label/Label";
 
 type Props = {
   user: UserExtended;
@@ -16,7 +16,7 @@ export const UserEntry = ({ user }: Props) => {
       : "tertiary";
 
   return (
-    <div className="table-grid py-6">
+    <div className="table-grid py-6 items-center">
       <div className="flex items-center gap-6">
         <img
           src={user.avatar}

@@ -1,9 +1,9 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import { AppHeader } from "./components/AppHeader/AppHeader";
 import { Dashboard } from "./components/Dashboard/Dashboard";
 import { InfoCards } from "./components/InfoCards/InfoCards";
-import { UsersPage } from "./layout/UsersPage";
+import { UsersPage } from "./layout/UserPage/UsersPage";
 
 function App() {
   return (
@@ -24,10 +24,9 @@ function App() {
             <InfoCards.Card title="Filtered" value="43" />
             <InfoCards.Card title="Banned" value="64" />
           </InfoCards>
-          {/* Move to routes */}
-          <UsersPage />
           <Routes>
-            <Route path="/users"></Route>
+            <Route path="/" element={<Navigate to={"/users"} />} />
+            <Route path="/users" element={<UsersPage />} />
           </Routes>
         </main>
       </div>
