@@ -27,7 +27,7 @@ export const AppHeader = ({ user, hasNotifications }: Props) => {
         </div>
         <div className="w-px h-8 bg-[#DFE0EB]"></div>
         <div className="flex gap-4 items-center">
-          <span className="font-semibold text-sm text-[#252733]">
+          <span className="font-semibold text-sm text-[#252733] hidden lg:inline">
             {user.name}
           </span>
           <div className="border-[1.5px] border-[#DFE0EB] rounded-full p-[2px] cursor-pointer">

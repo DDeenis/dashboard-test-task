@@ -17,7 +17,7 @@ export const UsersPage = () => {
   return (
     <div className="py-9">
       <UsersTable users={users} />
-      <div className="flex gap-8 mt-8">
+      <div className="flex gap-8 mt-8 flex-wrap lg:flex-nowrap">
         <TicketsTable />
         <TodosTable />
       </div>

@@ -1,14 +1,14 @@
 import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { AppHeader } from "./components/AppHeader/AppHeader";
-import { Dashboard } from "./components/Dashboard/Dashboard";
+import { AsideNav } from "./components/AsideNav/AsideNav";
 import { InfoCards } from "./components/InfoCards/InfoCards";
-import { UsersPage } from "./layout/UserPage/UsersPage";
+import { UsersPage } from "./layout/UsersPage/UsersPage";
 
 function App() {
   return (
     <div className="App">
-      <Dashboard />
+      <AsideNav />
       <div className="p-8 w-full">
         <AppHeader
           user={{

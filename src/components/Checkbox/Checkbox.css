@@ -39,8 +39,8 @@
 }
 
 .checkbox__active::after {
-  width: 10px;
+  width: 11px;
   bottom: 8px;
-  right: 4px;
+  right: 3px;
   transform: rotate(-45deg);
 }

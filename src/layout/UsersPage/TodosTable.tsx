@@ -43,10 +43,12 @@ export const TodosTable = () => {
           onChange={setTodo}
           placeholder="Create new task"
         />
-        {mockTodos.map((t) => (
-          <Todo {...t} />
-        ))}
       </Table.Row>
+      {mockTodos.map((t) => (
+        <Table.Row key={t.title}>
+          <Todo {...t} />
+        </Table.Row>
+      ))}
     </Table>
   );
 };

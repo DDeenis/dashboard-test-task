@@ -2,22 +2,6 @@ import clsx from "clsx";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-type Props = {
-  children: React.ReactNode;
-};
-
-type Extensions = {
-  Item: typeof DashboardItem;
-};
-
-export const DashboardGroup: React.FC<Props> & Extensions = ({ children }) => {
-  return (
-    <nav>
-      <ul className="flex flex-col my-4 list-none">{children}</ul>
-    </nav>
-  );
-};
-
 type ItemProps = {
   icon: JSX.Element;
   url: string;
@@ -25,7 +9,7 @@ type ItemProps = {
   children: string;
 };
 
-const DashboardItem: React.FC<ItemProps> = ({
+export const AsideNavItem: React.FC<ItemProps> = ({
   icon,
   url,
   isActive,
@@ -66,5 +50,3 @@ const DashboardItem: React.FC<ItemProps> = ({
     </li>
   );
 };
-
-DashboardGroup.Item = DashboardItem;
