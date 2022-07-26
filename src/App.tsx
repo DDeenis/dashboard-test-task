@@ -3,6 +3,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import { AppHeader } from "./components/AppHeader/AppHeader";
 import { AsideNav } from "./components/AsideNav/AsideNav";
 import { InfoCards } from "./components/InfoCards/InfoCards";
+import { UserPage } from "./layout/UserPage/UserPage";
 import { UsersPage } from "./layout/UsersPage/UsersPage";
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Navigate to={"/users"} />} />
             <Route path="/users" element={<UsersPage />} />
+            <Route path="/users/:id" element={<UserPage />} />
           </Routes>
         </main>
       </div>

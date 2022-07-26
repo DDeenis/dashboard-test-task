@@ -11,6 +11,9 @@ export const UsersPage = () => {
   const [users, setUsers] = useRecoilState(usersAtom);
 
   useEffect(() => {
+    // fetch only one time
+    if (users.length) return;
+
     fetchUsersExtended()
       .then((res) => setUsers(res))
       .catch((e) => console.error(e));
