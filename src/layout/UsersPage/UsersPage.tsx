@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react";
-import { fetchUsersExtended, UserExtended } from "../../api/users";
+import React, { useEffect } from "react";
+import { fetchUsersExtended } from "../../api/users";
 import { TicketsTable } from "./TicketsTable";
 import { TodosTable } from "./TodosTable";
 import { UsersTable } from "./UsersTable";
+import { useRecoilState } from "recoil";
+import { usersAtom } from "../../store/users";
 import "./UserPage.css";
 
 export const UsersPage = () => {
-  const [users, setUsers] = useState<UserExtended[]>([]);
+  const [users, setUsers] = useRecoilState(usersAtom);
 
   useEffect(() => {
     fetchUsersExtended()

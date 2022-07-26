@@ -10,7 +10,7 @@ export const Label = ({ text, variant }: Props) => {
   return (
     <div
       className={clsx(
-        "text-xs font-bold uppercase px-3 py-2 rounded-full w-max h-max",
+        "text-xs font-bold uppercase px-3 py-1 rounded-full w-max h-max",
         {
           "bg-[#F12B2C]": variant === "primary",
           "bg-[#FEC400]": variant === "secondary",
