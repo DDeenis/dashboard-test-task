@@ -27,11 +27,13 @@ export const UsersTable = ({ users }: Props) => {
         <span>Email</span>
         <span>Distance</span>
       </Table.Row>
-      <Table.Row>
-        {users.map((u) => {
-          return <UserEntry user={u} key={u.id} />;
-        })}
-      </Table.Row>
+      {users.map((u) => {
+        return (
+          <Table.Row hoverHighlight>
+            <UserEntry user={u} key={u.id} />
+          </Table.Row>
+        );
+      })}
     </Table>
   );
 };

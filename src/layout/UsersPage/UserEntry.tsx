@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { UserExtended } from "../../api/users";
 import { IconMenu } from "../../components/Icons/Icons";
 import { Label } from "../../components/Label/Label";
@@ -16,22 +17,24 @@ export const UserEntry = ({ user }: Props) => {
       : "tertiary";
 
   return (
-    <div className="table-grid py-6 items-center">
-      <div className="flex items-center gap-6">
-        <img
-          src={user.avatar}
-          alt="Avatar"
-          className="w-11 h-11 rounded-full"
-        />
-        <TextPair title={user.name} subtitle={user.username} />
+    <Link to={`/users/${user.id}`}>
+      <div className="table-grid py-6 items-center">
+        <div className="flex items-center gap-6">
+          <img
+            src={user.avatar}
+            alt="Avatar"
+            className="w-11 h-11 rounded-full"
+          />
+          <TextPair title={user.name} subtitle={user.username} />
+        </div>
+        <TextPair title={user.company.name} subtitle={user.company.bs} />
+        <TextPair title={user.email} subtitle={user.website} />
+        <Label text={user.distance} variant={labelVariant} />
+        <button>
+          <IconMenu />
+        </button>
       </div>
-      <TextPair title={user.company.name} subtitle={user.company.bs} />
-      <TextPair title={user.email} subtitle={user.website} />
-      <Label text={user.distance} variant={labelVariant} />
-      <button>
-        <IconMenu />
-      </button>
-    </div>
+    </Link>
   );
 };
 
